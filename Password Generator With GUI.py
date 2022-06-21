@@ -9,7 +9,8 @@ def generate_password():
     password = "".join(choice(all_chars) for x in range (randint(password_min, password_max)))
     password_entry.delete(0, END)
     password_entry.insert(0, password)
-
+    with open("Lastpass.txt", "w") as f:
+        f.write(password)
 def generate_password2():
     password_min = 8
     password_max = 99
@@ -17,7 +18,8 @@ def generate_password2():
     password = "".join(choice(all_chars) for x in range (randint(password_min, password_max)))
     password_entry.delete(0, END)
     password_entry.insert(0, password)
-
+    with open("Lastpass.txt", "w") as f:
+        f.write(password)
 def generate_password3():
     password_min = 8
     password_max = 99
@@ -25,7 +27,8 @@ def generate_password3():
     password = "".join(choice(all_chars) for x in range (randint(password_min, password_max)))
     password_entry.delete(0, END)
     password_entry.insert(0, password)
-
+    with open("Lastpass.txt", "w") as f:
+        f.write(password)
 
 
 window = Tk()
